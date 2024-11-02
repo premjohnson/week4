@@ -1,0 +1,1 @@
+console.log(myLet); // ReferenceError: Cannot access 'myLet' before initialization

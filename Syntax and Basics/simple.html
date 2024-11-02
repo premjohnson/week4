@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0,123,255,0.5);
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        h2 {
+            color: #555;
+            margin-top: 30px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        #addition, #subtraction, #multiplication, #division, #modulus {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-weight: bold;
+            color: #333;
+        }
+
+        #addition { color: #28a745; }
+        #subtraction { color: #dc3545; }
+        #multiplication { color: #17a2b8; }
+        #division { color: #ffc107; }
+        #modulus { color: #6f42c1; }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            input, button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button onclick="performCalculations()">Calculate</button>
+    <h2>Results:</h2>
+    <p id="addition"></p>
+    <p id="subtraction"></p>
+    <p id="multiplication"></p>
+    <p id="division"></p>
+    <p id="modulus"></p>
+    <script>
+        function performCalculations() {
+            // Get input values
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            // Perform calculations
+            let addition = num1 + num2;
+            let subtraction = num1 - num2;
+            let multiplication = num1 * num2;
+            let division = num1 / num2;
+            let modulus = num1 % num2;
+            // Display results
+            document.getElementById('addition').textContent = `Addition: ${addition}`;
+            document.getElementById('subtraction').textContent = `Subtraction: ${subtraction}`;
+            document.getElementById('multiplication').textContent = `Multiplication: ${multiplication}`;
+            document.getElementById('division').textContent = `Division: ${division}`;
+            document.getElementById('modulus').textContent = `Modulus: ${modulus}`;
+        }
+    </script>
+</body>
+</html>

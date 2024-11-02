@@ -1,0 +1,34 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Helvetica Neue',Helvetica,Arial;
+}
+.btn{
+    padding: 20px;
+    font-size: 18px;
+    border: 12px solid #00bfff41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42.8rem;
+    border-radius: 10px 10px 10px;
+    background-color: #332d2dec;
+}
+.btn button{
+    width: 12.3rem;
+    padding: 1.1rem;
+    font-size: 13,7px;
+    font-weight: 600;
+    border-radius: 11.5px;
+    outline: none;
+    background-color: #B0C4DE;
+    color: #252424de;
+}
+button:hover{
+ box-shadow:#27AFAB 0px 25px 50px -12px;
+}
